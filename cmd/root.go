@@ -7,10 +7,10 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:          "kubewg [command]",
+	Use:          "controller [command]",
 	SilenceUsage: true,
-	Short:        "kubewg is cni plugin for wireguard",
-	Long:         `kubewg is cni plugin for wireguard`,
+	Short:        "",
+	Long:         ``,
 }
 
 func Execute() {
