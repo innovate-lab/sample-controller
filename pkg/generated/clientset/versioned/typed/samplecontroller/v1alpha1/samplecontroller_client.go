@@ -30,7 +30,7 @@ type SamplecontrollerV1alpha1Interface interface {
 	FoosGetter
 }
 
-// SamplecontrollerV1alpha1Client is used to interact with features provided by the samplecontroller.k8s.io group.
+// SamplecontrollerV1alpha1Client is used to interact with features provided by the samplecontroller.innovate-lab.io group.
 type SamplecontrollerV1alpha1Client struct {
 	restClient rest.Interface
 }
