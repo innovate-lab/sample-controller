@@ -20,10 +20,16 @@ var (
 	kubeconfig string
 )
 
+func init() {
+	flag.StringVar(&kubeconfig, "kubeconfig", "", "Path to a kubeconfig. Only required if out-of-cluster.")
+	flag.StringVar(&masterURL, "master", "", "The address of the Kubernetes API server. Overrides any value in kubeconfig. Only required if out-of-cluster.")
+}
+
 func Run() error {
 	klog.InitFlags(nil)
 	flag.Parse()
 
+	kubeconfig = "/root/.kube/config"
 	// set up signals so we handle the shutdown signal gracefully
 	ctx := signals.SetupSignalHandler()
 	logger := klog.FromContext(ctx)
